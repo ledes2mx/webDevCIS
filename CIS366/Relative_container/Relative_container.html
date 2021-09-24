@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Relative Container</title>
+<style type="text/css">
+body {
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	}
+p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+
+#Sec1 {border: 3px solid #888;}
+
+#Sec2 {
+	position: relative;
+	border: 3px solid #888;
+	}
+
+#Sec1, #Sec2 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	}
+.absLeft {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+.absRight {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+</style>
+</head>
+
+<body>
+<section id="Sec1">
+	<h2>Sec1</h2>
+	<p>Maec enas aliquet varius posuere. Aenean at dui nunc. Prae sent malesuada, lectus sed faucibus ullam corper, mauris 
+		usto adipiscing erat, a dapibus dui augue sed turpis. Donec id augue sit amet tortor sagittis porta vel quis lorem. 
+		Proin pharetra lorem risus, sed. Nullam gravida sem id justo pharetra in lacinia dolor cursus. Pellentesque porttitor, 
+		libero eget interdum commodo, mi magna fermentum nibh, ac ornare sem nulla non nisi. Ut id magna lorem. In nulla quam, 
+		pretium quis hendrerit in, semper nec ipsum. Fusce enim nisi, pretium a scelerisque et, lacinia in tortor. Donec ac risus 
+		orci. Ut ut dui venenatis lacus ultricies lobortis vel ornare ligula.</p> 
+	<img class="absLeft" src="img_PurpSq.png" width="100px" height="100px" />
+	<img class="absRight" src="img_TurqRec.png" width="80px" height="110px" />
+</section>
+
+<section id="Sec2">
+	<h2>Sec2</h2>
+	<p>Maec enas aliquet varius posuere. Aenean at dui nunc. Prae sent malesuada, lectus sed faucibus ullam corper, mauris 
+		usto adipiscing erat, a dapibus dui augue sed turpis. Donec id augue sit amet tortor sagittis porta vel quis lorem. 
+		Proin pharetra lorem risus, sed. Nullam gravida sem id justo pharetra in lacinia dolor cursus. Pellentesque porttitor, 
+		libero eget interdum commodo, mi magna fermentum nibh, ac ornare sem nulla non nisi. Ut id magna lorem. In nulla quam, 
+		pretium quis hendrerit in, semper nec ipsum. Fusce enim nisi, pretium a scelerisque et, lacinia in tortor. Donec ac risus 
+		orci. Ut ut dui venenatis lacus ultricies lobortis vel ornare ligula.</p> 
+	<img class="absLeft" src="img_LimeRec.png" width="80px" height="110px" />
+	<img class="absRight" src="img_RedSq.png" width="100px" height="100px" />
+</section>
+
+</body>
+</html>
+
+
+
+
+
