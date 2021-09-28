@@ -24,11 +24,24 @@ h1 {
 	font-size: 250%;
 	color: #f3f2f0;
 	margin: 20px 0;
+	position: relative;
+	top: 1em;
 	}
+hr {
+	clear: left;
+	margin: 1em 0;
+}
 	
-header {margin: 1em 2em 0 2em;}
+header {margin: 1em 2em;
+}
 	
-img {margin: 0 .2em .2em 2em;}
+img {margin: 0 .2em .2em 2em;
+	float: right;
+}
+
+#Dog {
+	float: left;
+}
 	
 aside {
 	width: 150px;
@@ -38,6 +51,9 @@ aside {
 	background-color: green;
 	padding: .5em 1em;
 	}
+.mod {
+	float: right;
+}
 		
 </style>
 </head>
@@ -46,11 +62,10 @@ aside {
 <section id="container">
 
 <header>
+<img id="Dog" src="SquareDukeDog.jpg" alt="Duke Dog" width="150" height="150"/> 
 <h1>Floating images and other boxes</h1>
 </header>
-
-<img src="carrier.jpg" alt="carrier" />
-
+<hr/>
 <aside>
 	<p>Curabitur scelerisque lacus fermentum nisi odio et ipsum. .</p>
 	<ul>
@@ -77,7 +92,7 @@ aside {
 		lorem. Sed dui elit, auctor eu dignissim ut, feugiat eget mauris.</p>
 
 	
-		<img id="Dog" src="SquareDukeDog.jpg" alt="Duke Dog" width="150" height="150"/> 
+		
 	<img src="COB_logo.jpg" alt="New Logo for College of Business" />
 
 	<p>Ut feugiat pellentesque lectus. Suspendisse ullamcorper rutrum est, ut interdum ligula ullamcorper 
@@ -89,7 +104,6 @@ aside {
 		Nullam luctus in arcu varius accumsan. Donec pretium leo eget leo lobortis malesuada. Interdum et malesuada fames 
 		ac ante ipsum primis in faucibus. Integer ut ornare nibh. </p>
 </section>
-
 </section>
 
 </body>
