@@ -1,9 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <title>Favorite Harrisonburg Restaurants</title>
+        <style>
+            body {
+                background-color: #96F6A6;
+                color: black;
 
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 200px;
+                margin-right: 200px;
+                position: relative;
+            }
+            aside {
+                float: right;
+                color: black;
+                margin-right: 1em;
+
+                background-color: #F37F82;
+                padding: .5em 1em;
+	        }
+            .restaurant {
+                padding-left: 20px;
+                border-top:solid 3px #DD22A4;
+                border-left:solid 3px #DD22A4;
+                margin-bottom:  30px;;
+            }
+            .price{
+                font-family: Georgia, serif;
+                font-style: italic;
+                color: black;
+            }
+            ul {
+                list-style-type: square;
+            }
+            li {
+                color: black;
+            }
+            footer {
+                position: absolute;
+                font-size: 70%;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
     </head>
     <body>
-        
+        <div class="container">
+            <header>
+                <h1>Favorite Restaurants in Harrisonburg</h1>
+            </header>
+
+            <div class="restaurant">
+                <h3>Bella Luna</h3>
+                <aside>
+                    <h4>Sample Menu</h4>
+                    <ul>
+                        <li>Margherita <span class="price">$11</span></li>
+                        <li>Brooklyn <span class="price">$13</span></li>
+                        <li>Ring of Fire <span class="price">$14</span></li>
+                        <li>The Don <span class="price">$13</span></li>
+                        <li>Simple Cheese <span class="price">$10</span></li>
+                        <li>Sausage <span class="price">$13</span></li>
+                    </ul>
+                </aside>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra sit amet aliquam id diam. Iaculis eu non diam phasellus. Eget velit aliquet sagittis id consectetur purus. Sit amet justo donec enim diam vulputate ut. Viverra adipiscing at in tellus integer feugiat scelerisque. Interdum velit laoreet id donec ultrices tincidunt arcu non sodales. Vulputate dignissim suspendisse in est ante. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Tempor orci dapibus ultrices in iaculis. Eget felis eget nunc lobortis mattis. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Venenatis a condimentum vitae sapien pellentesque habitant. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+            </div>
+
+            <div class="restaurant">
+                <h3>El Sol</h3>
+                <aside>
+                    <h4>Sample Menu</h4>
+                    <ul>
+                        <li>Tacos de Carnitas <span class="price">$7</span></li>
+                        <li>Tacos de Carne Asada <span class="price">$7</span></li>
+                        <li>Tacos de Res <span class="price">$7</span></li>
+                        <li>Torta de Jamon <span class="price">$6</span></li>
+                    </ul>
+                </aside>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis hendrerit dolor magna eget est. Id semper risus in hendrerit gravida rutrum. Rhoncus dolor purus non enim praesent elementum facilisis. Nisi quis eleifend quam adipiscing vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui ut. Fermentum leo vel orci porta non pulvinar neque. Ut aliquam purus sit amet luctus venenatis lectus. Leo a diam sollicitudin tempor. Felis eget velit aliquet sagittis id consectetur purus ut. Commodo odio aenean sed adipiscing diam donec adipiscing. Nam libero justo laoreet sit amet cursus.</p>
+            </div>
+
+            <footer>
+                <p>&copy; 2021 Miguel Ledesma</p>
+            </footer>
+        </div>
+        <p>I do not believe that the original color scheme displays an acceptable amount of contrast because webaim
+            wants the background to be a lighter color when the text is darker. It likely does not meet those standards.
+            I had to modify my own because of this checker. I changed colors completely to be able to meet the requirements.
+        </p>
     </body>
 </html>
