@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>JS Color Change</title>
+<style type="text/css">
+body {font-family: Verdana, Arial, sans-serif;
+	margin: 0 35% 0 10%;}
+h1 {font-family: Georgia, "Times New Roman", Times, serif;}
+
+span {text-decoration: underline;
+	background-color: yellow;}
+
+</style>
+
+<script type="text/javascript">
+	function goYellow() {
+		document.body.style.background = "yellow";
+		document.body.style.color="blue";
+	}
+	function goSilver() {
+		document.body.style.background = "silver";
+	}
+	function goGreen() {
+		document.body.style.color="green";
+	}
+	function h3Teal() {
+		document.getElementById("SmallHeading").style.background="teal";
+		document.getElementById("SmallHeading").style.color="#fff";
+		document.getElementById("teal").style.background=document.body.style.background;
+	}
+</script>
+</head>
+
+<body>
+
+<h1>JavaScript Home Page</h1>
+	<h3 id="SmallHeading">A simple welcome page with minimal text styling</h3>
+	<img id="more" src="font_size_more.png" width="50" height="50" />
+	<img id="less" src="font_size_less.png" width="50" height="50" />
+<br />
+
+<p>Make the background <span onclick="goYellow();">yellow and the text blue</span></p>
+<p>Make the background <span onclick="goSilver();">silver</span></p>
+<p>Change the font color to <span onclick="goGreen()">green</span></p>
+
+<p>Change h3 to <span id="teal" onclick="h3Teal();">teal</span></p>
+
+<footer>
+	<p>
+		<script type="text/javascript">
+			var update = new Date(document.lastModified);
+			var modMonth = update.getMonth() + 1;
+			var modDate = update.getDate();
+			var modYear = update.getFullYear();
+			document.write("<br />Last updated: " + modMonth + "/" + modDate + "/" + modYear);
+		</script>
+	</p>
+</footer>
+
+
+</body>
+</html>
