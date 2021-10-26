@@ -31,33 +31,71 @@ span {text-decoration: underline;
 		document.getElementById("SmallHeading").style.color="#fff";
 		document.getElementById("teal").style.background=document.body.style.background;
 	}
+	/* gets first element specified */
+	function chgFirstSpan()
+	{
+		document.querySelector("span").style.background = document.body.style.background;
+	}
+	// querySelectorALl gets all of the specified element and creates and array
+	function chgAllSpans()
+	{
+		var allSpans = document.querySelectorAll("span");
+		for (var i = 0; i < allSpans.length; i++)
+		{
+			allSpans[i].style.background = "#ff8040";
+		}
+	}
+
+	function largePara()
+	{
+		var p = document.querySelectorAll("section .fontChg, h3");
+		for (var i = 0; i < p.length; i++)
+		{
+			p[i].style.fontSize = "150%";
+		}
+
+	}
+
+	function smallPara()
+	{
+		var p = document.querySelectorAll("section .fontChg, h3");
+		for (var i = 0; i < p.length; i++)
+		{
+			p[i].style.fontSize = "100%";
+		}
+	}
 </script>
 </head>
 
 <body>
-
+<section>
 <h1>JavaScript Home Page</h1>
 	<h3 id="SmallHeading">A simple welcome page with minimal text styling</h3>
-	<img id="more" src="font_size_more.png" width="50" height="50" />
-	<img id="less" src="font_size_less.png" width="50" height="50" />
+	<img id="more" src="font_size_more.png" width="50" height="50" onmouseover="largePara()"/>
+	<img id="less" src="font_size_less.png" width="50" height="50" onmouseover="smallPara()"/>
 <br />
 
-<p>Make the background <span onclick="goYellow();">yellow and the text blue</span></p>
-<p>Make the background <span onclick="goSilver();">silver</span></p>
-<p>Change the font color to <span onclick="goGreen()">green</span></p>
+<p class="fontChg">Make the background <span onclick="goYellow();">yellow and the text blue</span></p>
+<p class="fontChg">Make the background <span onclick="goSilver();">silver</span></p>
+<p class="fontChg">Change the font color to <span onclick="goGreen()">green</span></p>
 
 <p>Change h3 to <span id="teal" onclick="h3Teal();">teal</span></p>
+</section>
+<button onclick="chgFirstSpan();">Change first span</button>
+<button onclick="https://jmu.edu">Go JMU</button>
+<button onclick="chgAllSpans();">Change all spans</button>
 
 <footer>
-	<p>
-		<script type="text/javascript">
-			var update = new Date(document.lastModified);
-			var modMonth = update.getMonth() + 1;
-			var modDate = update.getDate();
-			var modYear = update.getFullYear();
-			document.write("<br />Last updated: " + modMonth + "/" + modDate + "/" + modYear);
-		</script>
+	<p id="ModDay">
 	</p>
+	<script type="text/javascript">
+		var update = new Date(document.lastModified);
+		var days= ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"]
+		var modMonth = update.getMonth() + 1;
+		var modDate = update.getDate();
+		var modYear = update.getFullYear();
+		document.getElementById("ModDay").innerHTML = "Last updated on: " + days[update.getDay()] + " " + modMonth + "/" + update.getDate() + "/" + modYear;
+	</script>
 </footer>
 
 
