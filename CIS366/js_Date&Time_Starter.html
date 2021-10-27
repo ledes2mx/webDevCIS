@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Date & Time Examples</title>
+<style type="text/css">
+body {
+	font-family: Verdana, sans-serif;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+h3 {margin-top: 3em;}
+</style>
+
+<script type="text/javascript">
+
+function setGreeting() {
+	var d= new Date();
+
+	var time = d.getHours();
+
+	if (time < 12) {
+		document.write("Good morning - how about lunch at Vito's?");
+		document.body.style.background = "#ADD8E6";
+		document.body.style.color = "#00008b";
+	}
+	else if (time > 12 && time < 17) {
+		document.write("Good afternoon - Vito's has some great dinner specials!");
+		document.body.style.background = "#FF7F7F";
+		document.body.style.color = "black";
+	}
+	else {
+		document.write("Good evening - the patio is open - come join us!");
+		document.body.style.background = "black";
+		document.body.style.color = "white";
+	}
+
+}
+
+function compDates() {
+	var modDate = new Date(document.lastModified);
+	var otherDate = new Date(2020, 10, 01);
+
+	console.log(modDate < otherDate);
+
+	document.write("modDate is: " + modDate +  " and otherDate is: " + otherDate);
+}
+
+function incDates() {
+	var modDate = new Date(document.lastModified);
+	var month = modDate.getMonth() + 1;
+	var year = modDate.getFullYear();
+	var date = modDate.getDate() + 3;
+
+	alert("Three days from now will be: " + month + "/" + date + "/" + year);
+	document.write("Three days from now will be: " + month + "/" + date + "/" + year);
+}
+
+function timeDelay() {
+	document.write("In 10 seconds, an alert will appear!");
+	setTimeout(function(){alert("It's been 10 seconds");}, 5000);
+}
+
+</script>
+
+</head>
+
+<body>
+<h3>Welcome to Vito's!</h3>
+	<script>
+		setGreeting();
+	</script>
+
+
+<h3>Compare dates</h3>
+
+	<script>
+		compDates();
+	</script>
+
+
+<h3>Increase date</h3>
+	<script>
+		incDates();
+	</script>
+
+
+<h3>10-second timer</h3>
+
+	<script>
+		timeDelay();
+	</script>
+
+
+</body>
+</html>
+
