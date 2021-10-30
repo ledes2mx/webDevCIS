@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <!-- Miguel Ledesma -->
+    <body>
+
+        <footer>
+            <p id="ModDay">
+            </p>
+            <script type="text/javascript">
+                var update = new Date(document.lastModified);
+                var days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                var modMonth = update.getMonth() + 1;
+                var modDate = update.getDate();
+                var modYear = update.getFullYear();
+                document.getElementById("ModDay").innerHTML = "&copy; Miguel Ledesma," + days[update.getDay()] + " " + modMonth + "/" + update.getDate() + "/" + modYear;
+            </script>
+        </footer>
+    </body>
+</html>

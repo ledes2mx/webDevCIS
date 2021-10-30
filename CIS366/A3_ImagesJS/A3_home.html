@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .left-float {
+                margin: 0 .2em .2em 2em;
+                float: left;
+            }
+            .right-float {
+                margin: 0 .2em .2em 2em;
+                float: right;
+            }
+        </style>
+
+    </head>
+    <!-- Miguel Ledesma -->
+    <body>
+        <h1>2 Topics of Dark UX</h1>
+
+        <h3>1. Forced Action</h3>
+        <img class="left-float" src="Images/FA1.png" height="150">
+        <img class="right-float" src="Images/FA1.png" height="150">
+        <p>
+            Forced action is defined as a situation in which the user is required to do something to access functionalities of some website or some application or program.
+            These can range from agreeing to "Terms and Conditions" that are used in applications such as Apple Media Services to blocking some users of applications or games
+            because they have not fulfilled some condition to continue. When Apple uses this technique, they sometimes tend to block applications from downloading or updating,
+            meaning that the user would have to agree to something that is most likely not visible or clear to the user such as information sharing just to continue to use applications.
+            When video games use this technique, they put some playable missions behind a level barrier, meaning that the player would have to play something that they would
+            otherwise not want to play in order to access the area or mission that they do want to play.
+        </p>
+
+        <img class="right-float" src="Images/FA1.png" height="150">
+
+        <h3>2. Obstruction</h3>
+        <p>
+            Obstruction by definition is impeding the user from completing a task, making the user's experience to complete a task much more difficult than the user expects it
+            to be. These sorts of techniques seem to be much more popular with sites and companies that require a subscription as well as sites that want to push some sort of
+            notification on people who visit their website, such as Zynga, Amazon, and the New York Times. There are various techniques that these companies can use, such as
+            hiding the link to unsubscribe to the user's subscription by making the text's color the same color as the background of the site, or even trying to confuse the user
+            by switching what would be the confirm to unsubscribe button with a similar looking button, but it stops the unsubscription process. They can also make the unsubscribe
+            link more lowkey by putting the link under the large cancel button in small text.
+        </p>
+
+        <footer>
+            <p id="ModDay">
+            </p>
+            <script type="text/javascript">
+                var update = new Date(document.lastModified);
+                var days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                var modMonth = update.getMonth() + 1;
+                var modDate = update.getDate();
+                var modYear = update.getFullYear();
+                document.getElementById("ModDay").innerHTML = "&copy; Miguel Ledesma, " + days[update.getDay()] + " " + modMonth + "/" + update.getDate() + "/" + modYear;
+            </script>
+        </footer>
+    </body>
+</html>
