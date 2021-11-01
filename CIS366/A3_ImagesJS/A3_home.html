@@ -39,6 +39,10 @@
                 display: flexbox;
                 justify-content: space-between;
             }
+            a {
+                text-decoration: underline;
+                color:#7E08B4;
+            }
         </style>
         <script>
             var darkFlag = new Boolean(false);
@@ -47,11 +51,13 @@
                     darkFlag = true;
                     document.body.style.background = "#7E08B4";
                     document.body.style.color = "white";
+                    document.getElementById("linkChild").style.color = "gold";
                 }
                 else {
                     darkFlag = false;
                     document.body.style.background = "#dea2fa";
                     document.body.style.color = "black";
+                    document.getElementById("linkChild").style.color = "#7E08B4";
                 }
             }
         </script>
@@ -109,7 +115,7 @@
         <p>Obstruction - UXP2: Dark patterns. UXP2. (2018, March 1). Retrieved October 31, 2021, from https://darkpatterns.uxp2.com/patterns-2/obstruction/. </p>
         <p>Forced action - UXP2: Dark patterns. UXP2. (2018, March 1). Retrieved October 31, 2021, from https://darkpatterns.uxp2.com/patterns-2/forced-action/. </p>
 
-        <h3>Link to Guide for other forms of Dark UX: <a href="A3_child.html">Guide</a></h3>
+        <h3>Link to Guide for other forms of Dark UX: <a id="linkChild" href="A3_child.html">Guide</a></h3>
 
         <footer>
             <p id="ModDay">
