@@ -32,14 +32,43 @@
 		margin-bottom: 5px;
 		display: none;
 	}
+	.MovieTitle {
+		color: red;
+	}
 </style>
 <script>
+	/*
 	function show101()
 	{
 		document.getElementById("pic101").style.display = 'block';
 	}
 	function no101() {
 		document.getElementById("pic101").style.display = 'none';
+	}
+	function showLion() {
+		document.getElementById("picLion").style.display = 'block';
+	}
+	function noLion() {
+		document.getElementById("picLion").style.display = 'none';
+	}
+	function showFeesh() {
+		document.getElementById("picFeesh").style.display = 'block';
+	}
+	function noFeesh() {
+		document.getElementById("picFeesh").style.display = 'none';
+	}
+	*/
+	function showImage(imageID) {
+		/*imageId holds the id of the pictuer we will show*/
+		var showPic = document.getElementById(imageID);
+		showPic.style.display = 'block';
+		
+	}
+	function noImage(imageID) {
+		/*imageId holds the id of the pictuer we will not show*/
+		var noPic = document.getElementById(imageID);
+		noPic.style.display = 'none';
+		
 	}
 </script>
 
@@ -48,20 +77,22 @@
 <body>
 
 	<aside>
+		<img id="image" src="images/">
 		<img id="pic101" src="images/101Dal_1.jpg" />
 		<img id="picFeesh" src="images/Nemo_1.jpg" />
+		<img id="picLion" src="images/LionKing_1.jpg"/>
 	</aside>
 
 
 <h2>Disney Movie Facts</h2>
 <section id="movies">
 <ul>
-	<li><span id="pic101" onmouseover="show101();" onmouseout="no101();">101 Dalmatians</span>, Peter Pan, Lady and the Tramp, and Mulan are among the only animated Disney films where both parents are present and don&#39;t die during the course of the movie.</li>
-	<li>A hyena biologist sued Disney for portraying hyenas as villains in The Lion King.</li>
+	<li><span class="MovieTitle"  onmouseover="showImage('pic101');" onmouseout="noImage('pic101');">101 Dalmatians</span>, Peter Pan, Lady and the Tramp, and Mulan are among the only animated Disney films where both parents are present and don&#39;t die during the course of the movie.</li>
+	<li>A hyena biologist sued Disney for portraying hyenas as villains in <span class="MovieTitle" onmouseover="showImage('picLion');" onmouseout="noImage('picLion');">The Lion King</span>.</li>
 	<li>Christian Bale voiced the character of Thomas in Pocahontas.</li>
 	<li>The group Abba was originally intended to do the music for The Lion King, but they weren&#39;t available, so Disney went with Elton John.</li>
 	<li>Frozen is the first animated Disney film directed by a woman.</li>
-	<li><span id="picFeesh" >Finding Nemo</span> harmed clownfish populations after people started buying tons of pet clownfish after seeing the movie.</li>
+	<li><span class="MovieTitle" onmouseover="showImage('picFeesh');" onmouseout="noImage('picFeesh');">Finding Nemo</span> harmed clownfish populations after people started buying tons of pet clownfish after seeing the movie.</li>
 	<li>Andy didn&#39;t have a dad in Toy Story because human characters were expensive and difficult to animate.</li>
 	<li>It would take about 9.4 million balloons to lift Carl&#39;s house in Up.</li>
 	<li>Beauty and the Beast was the first ever animated film to be nominated for an Oscar for Best Film.</li>

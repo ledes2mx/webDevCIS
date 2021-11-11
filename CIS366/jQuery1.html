@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery 1</title>
+    <script src="jquery.js"></script>
+	<style type="text/css">
+		section {
+			background-color: #77ac80;
+			font-size: 200%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<script>
+
+	// Your jQuery code goes here.
+	$(document).ready(function() {
+		//$("p").text("The DOM is now loaded - you're ready to go!");
+		$("#thirdp").text("The DOM is now loaded - you're ready to go!");
+		$("button").click(function() {
+			$("section").slideToggle();
+		});
+	});
+
+	
+
+
+	</script>
+	<section>
+		<p>The DOM hasn't finished loading yet</p>
+		<p>Not yet</p>
+		<p id="thirdp"> Still not ready</p>
+	</section>
+	
+	<button>Toggle between slide up and slide down for all paragraphs</button>
+	
+</body>
+</html>
