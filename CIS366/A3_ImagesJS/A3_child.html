@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color:#dea2fa;
+            }
+            section {
+                display: inline-block;
+                border: solid 2px gold;
+                clear: both;
+                margin: 20px 20px 20px 20px;
+            }
+            p {
+                width: 50%;
+                padding: 5px 5px 5px 5px;
+            }
+            img {
+                padding: 5px 5px 5px 5px;
+                width: 50%;
+                float: right;
+            }
+            footer {
+                margin-top: 30px;
+                text-align: right;
+                font-style:italic;
+                font-size:70%;
+            }
+            
+        </style>
+
+    </head>
+    <!-- Miguel Ledesma -->
+    <body>
+        <h1>Technique Discussion</h1>
+        <section>
+            <img src="Images/DarkUX.png">
+            <p>
+                As stated before hand, there are many differrent types of Dark UX patterns that we see all of the time.
+                Other forms of Dark UX patterns that were not discussed before include Nagging, Sneaking, and Interface
+                Interference.
+            </p>
+        </section>
+        <section>
+            <img src="Images/Nagging.png">
+            <p>
+                Nagging is a form of Dark UX that is defined as minor redirecitons of functionality that continues over
+                multiple interatctions. An example of this is the app "Instagram" asking for the location of the user
+                without having a direct no button, rather saying that the interaction does not have to happen immidately.
+            </p>
+        </section>
+        <section>
+            <p>
+                Sneaking is defined as attempting to hide, disguise, or delay information that has relevance to the user.
+                This can come in forms such as continuing subscriptions like console's internet connection whenever the user
+                purchases their online plan, and the user does not have to cancel the subscription if they feel that they
+                want to continue or it does not feel as though the subscription is paid so far in advance, the user forgets
+                when the subscription is charged.
+            </p>
+        </section>
+        <section>
+            <img src="Images/Interference.png">
+            <p>
+                Interface interference is defined as manipulation to the user interface that requires some action over others.
+                This would make the user feel as though that they have to take action while at the same time hiding other options
+                from the user that they could pursue. An example of this would be the large ads Yahoo uses to distract the user
+                from updating security preferences.
+            </p>
+        </section>
+        <footer>
+            <h4 id="ModDay">
+            </h4>
+            <script type="text/javascript">
+                var update = new Date(document.lastModified);
+                var days= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                var modMonth = update.getMonth() + 1;
+                var modDate = update.getDate();
+                var modYear = update.getFullYear();
+                document.getElementById("ModDay").innerHTML = "&copy; Miguel Ledesma," + days[update.getDay()] + " " + modMonth + "/" + update.getDate() + "/" + modYear;
+            </script>
+        </footer>
+    </body>
+</html>
