@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>Ledesma</title>
+
+<style type="text/css">
+body {
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	width: 60%;
+	margin: 0 auto;
+	background: #fbf6d9;
+	}
+
+img {
+	float: right;
+	background: #fbf6d9;
+	padding: 1em;
+	}
+aside {
+	text-align: center;
+	width: 15em;
+	}
+
+aside p {
+	color: #4863a0;
+	font-weight: bold;
+	}
+
+dl {margin-top: 2em;}
+
+dt {font-weight: bold;}
+
+dd {
+	margin-top: .25em;
+	margin-left: 1em;
+	}
+.ex {
+	margin-left: 2em;
+}
+
+button {
+	border: 0;
+	width: 12em;
+	color: #fff;
+	background: #4863a0;
+	padding: 1em;
+	}
+
+footer {
+	font-size: .75em;
+	font-style: italic;
+	text-align: right;
+	}
+button {
+	cursor: pointer;
+}
+	
+</style>
+
+<script type="text/javascript">
+
+function showNouns() {
+	var allNouns = document.querySelectorAll(".noun");
+	for (var i = 0; i < allNouns.length; i++) {
+		allNouns[i].style.background = "#ff8040";
+	}
+}
+
+function noNouns() {
+	var allNouns = document.querySelectorAll(".noun");
+	for (var i = 0; i < allNouns.length; i++) {
+		allNouns[i].style.background = document.body.style.background;
+	}
+}
+
+function showAdjectives() {
+	var allAdj = document.querySelectorAll(".adj");
+	for (var i = 0; i < allAdj.length; i++) {
+		allAdj[i].style.background = "#54c571";
+	}
+}
+
+function noAdjectives() {
+	var allAdj = document.querySelectorAll(".adj");
+	for (var i = 0; i < allAdj.length; i++) {
+		allAdj[i].style.background = document.body.style.background;
+	}
+}
+
+function clearAll() {
+    var all = document.querySelectorAll(".adj, .noun"); 
+	noNouns();
+	noAdjectives();
+
+}
+
+function jump_border(imageID) {
+	var border_image = document.getElementById(imageID);
+	border_image.style.padding = "5px";
+	border_image.style.background = "#4863a0";
+
+	setTimeout(clearBorder(border_image), 2000);
+	
+	//setTimeout(clearBorder(border_image),);
+}
+
+
+function cat_border(imageID) {
+	var border_image = document.getElementById(imageID);
+	border_image.style.padding = "5px";
+	border_image.style.background = "#4863a0";
+
+	setTimeout(clearBorder(border_image), 2000);
+}
+	
+	
+function clearBorder(imageID) {
+	var border_image = document.getElementById(imageID);
+	border_image.style.padding = "0px";
+	border_image.style.background = document.body.style.background;
+	
+	}
+</script>
+</head>
+
+<body>
+
+<h1>Word Games</h1>
+<h2>Palindromes</h2>
+	<h3>/'palənˌdrōm/ a word, phrase, or sequence that reads the same backward and forward</h3>
+
+<section>
+	<img id="pan" src="images/pangram.jpg" width="333" height="131">
+
+	<aside>
+	<p>a santa at nasa</p>
+	<p>top spot</p>
+	<p>rotator</p>
+	<p>level</p>
+	<p>radar</p>
+	<p>racecar</p>
+	<p>nurses run</p>
+	<p>no lemon no melon</p>
+
+	</aside>
+</section>
+
+	<img id="cat" src="images/TacoCat2.jpg" width="290" height="290">
+
+<!-- Source: http://www.fun-with-words.com/index.html -->
+<dl>
+	<dt>Anagrams</dt>
+		<dd>words or phrases made by mixing up letters of other words or phrases</dd>
+		<dd class="ex">Debit card / <span class="adj">Bad credit</span></dd>
+		<dd class="ex">Schoolmaster / The classroom</dd>
+		<dd class="ex">Astronomer / Moon starer</dd>
+	<dt onmouseover="jump_border('pan');"><u>Pangrams</u></dt>
+		<dd>sentences that use every letter of the alphabet</dd>
+		<dd class="ex">A <span class="adj">large</span> <span class="noun">fawn</span> jumped quickly over white zinc boxes</dd>
+		<dd class="ex">Sixty <span class="noun">zippers</span> were quickly picked from the woven jute bag</dd>
+	<dt onmouseover="cat_border('cat');"><u>Palindromes</u></dt>
+		<dd>words or phrases that read the same in both directions</dd>
+		<dd class="ex">Never odd or even</dd>
+		<dd class="ex">No trace; not one <span class="noun">carton</span></dd>
+	<dt>Oxymorons</dt>
+		<dd>a figure of speech in which <span class="adj">contradictory</span> terms appear in conjunction</dd>
+		<dd class="ex">almost exactly</dd>
+		<dd class="ex">original <span class="noun">copy</span></dd>
+		<dd class="ex">old <span class="noun">news</span></dd>
+</dl>
+
+
+<button onclick="showNouns(); noAdjectives()"  >Show nouns</button>
+
+<button onclick="showAdjectives(); noNouns()">Show adjectives</button> 
+
+<button onclick="clearAll();">Reset</button> 
+<footer>
+
+<p>
+	<p id="ModDay"></p>
+	<script type="text/javascript">
+		var update = new Date(document.lastModified)
+		var days= ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"]
+		var modMonth = update.getMonth() + 1;
+		var modDate = update.getDate();
+		var modYear = update.getFullYear();
+		var modTime = update.getTime();
+		document.getElementById("ModDay").innerHTML = "Last updated on: " + days[update.getDay()] + " " + document.lastModified;
+	</script>
+
+</p>
+
+<p id="author">Author: 
+	<script type="text/javascript">
+	document.getElementById("author").innerHTML = "Author: L. Miguel"
+
+	</script>
+</p>
+
+</footer>
+
+</body>
+</html>
