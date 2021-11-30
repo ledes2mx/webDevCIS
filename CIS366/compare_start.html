@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>js Conditional with Append and innerHTML</title>
+
+<style>
+body {
+	font-family: Arial, sans-serif; 
+	font-size: 14pt; 
+	background: #ffdfc5;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	}
+	
+h1 {
+	font-family: Arial, sans-serif; 
+	font-size: 14pt; 
+	color: #ffdfc5; 
+	background: #9f5820; 
+	margin: 20px 100px 30px 0px; 
+	padding: 10px; 
+	}
+	
+input[type="button"] {
+	margin-top: 1em;
+	padding: .5em;
+	font-size: 125%;
+	background: #7d83bb; 
+	border: 0;
+	}	
+p 	{
+	padding-bottom: 12px;
+	padding-top: 20px;
+	margin-top: 1em;
+	color: #384f86;
+	}
+
+
+</style>
+
+<script type="text/javascript">
+
+function compareNow()  {
+	var one=(document.compvals.firstValue.value);	
+	var two=(document.compvals.secondValue.value);
+	
+
+// finds the container
+ // adds a paragraph element
+
+
+	
+ // populate the paragraph //
+ // appending the paragraph to the section
+
+function compareNow2(one, two)
+  {
+
+	}
+</script>
+</head>
+
+<body>
+<form id="comp" name="compvals">
+<h1>Comparison using a Conditional & Append</h1>
+
+	First value: <input type="number" name="firstValue" />
+	Second value: <input type="number" name="secondValue" />
+
+	<!-- Empty section to receive value from compareNow()  -->
+	<section id="answerSection">
+	
+	</section>
+
+	<input type="button" value="Compare"" />
+	
+</form>	
+
+<form id="comp2" name="compvals2">
+<h1>Comparison using innerHTML</h1>
+
+	First value: <input type="number" name="firstVal2" />
+	Second value: <input type="number" name="secondVal2"" />
+
+	<!-- Empty paragraph to receive value from compareNow2()  -->
+	<p id="answerp">The answer is: </p>
+	
+</form>	
+
+</body>
+</html>
