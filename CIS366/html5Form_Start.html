@@ -57,9 +57,9 @@ input[type="text"] {
 #GPAout {
 	font-size: 90%;
 	color: #151b8d;
-
-	
-	
+	position: relative;
+	left: 5em;
+	top: .3em;
 	}
 	
 #credits {width: 5em;}
@@ -89,23 +89,64 @@ input[type="button"]
 	}
 	
 </style>
+<script type="text/javascript">
+	function chkemail() {
+		var femail=document.COBForm.email.value;
+		var semail=document.COBForm.email2.value;
+
+		if (femail != semail) {
+			document.COBForm.email.style.background = "red";
+			document.COBForm.email2.style.background = "red";
+		}
+		else {
+			document.COBForm.email.style.background = "#eee";
+			document.COBForm.email2.style.background = "#eee";
+		}
+	}
+</script>
 
 </head>
 
 <body>
 <section>
 	<h2>COB Survey</h2>
+	<form name="COBForm" action="html5Confirm.html" method="post">
+		<label for="fname">Name</label>	
+		<!--Name Fields-->
+		<input type="text" name="fn" id="fname" placeholder="First Name" required="required" />
+		<input type="text" name="ln" id="lname" placeholder="Last Name" required="required" />
 
-	<p>How many credits are you taking this semester?</p>
+		<br/>
 
-	<p>What is your GPA?</p>
+		<label for="e_mail">e-mail</label>
+		<input type="email" name="email" id="e_mail" />
+
+		<label for="e_mail2" id="C-label">Confirm e-mail</label>
+		<input type="email" name="email2" id="e_mail2" onblur="chkemail();"/>
+
+		<p>How many credits are you taking this semester?</p>
+		<label for="credits">Credits</label>
+		<input type="number" id="credits" name="credits" min="12" max="21" step="1" value="15" />
+
+		<p>What is your GPA?</p>
+		<label for="gpa">GPA</label>
+		<span>0</span>
+		<input type="range" name="gpa" id="gparange" min="0" max="4.0" step="0.1" onchange="showgpa.value = gpa.valueAsNumber"/>
+		<span>4.0</span>
+		<br/>
+		<span id="GPAout">GPA <output for="gparange" name="showgpa">2.0</output></span>
+
+		<p>What is your Major?</p>
+		<label for="major">Major</label>
+	
+	
+	
+		<p>How often do you use the services of the ASC?</p>
 
 
-	<p>What is your Major?</p>
 
 
-
-	<p>How often do you use the services of the ASC?</p>
+	</form>
 
 
 	
