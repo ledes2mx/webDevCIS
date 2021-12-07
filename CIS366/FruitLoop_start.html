@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Fruit Loop</title>
+<style>
+body {
+	font-family: Arial, sans-serif; 
+	font-size: 110%; 
+	background-color: #ffdfc5;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+form {margin-top: 2em;}
+	
+h4 {color: #9f5820;}
+
+label {
+	display: block;
+	margin-bottom: .5em;
+	}
+	
+input[type="button"] {
+	margin-top: 1em;
+	padding: .75em;
+	font-size: 125%;
+	background-color: #7d83bb; 
+	border: 0;
+	}	
+</style>
+
+</head>
+<body>
+<form name="fruitform" method="post" action="https://en.wikipedia.org/wiki/Fruit">
+   <label>Name: <input type="text" name="firstName"></label>
+	
+   <h4>Favorite fruits: </h4>
+   <label><input type="checkbox" name="fav[]"> Apple </label>
+   <label><input type="checkbox" name="fav[]"> Banana </label>
+   <label><input type="checkbox" name="fav[]"> Orange </label>
+   <label><input type="checkbox" name="fav[]"> Mango </label>
+	 
+	<input class="NextButton" id="NextBtn" type="button" value="Next" onclick="validate();"/>
+
+</form>
+
+</body>
+</html>

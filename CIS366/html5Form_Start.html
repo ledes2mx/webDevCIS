@@ -103,6 +103,24 @@ input[type="button"]
 			document.COBForm.email2.style.background = "#eee";
 		}
 	}
+
+	function smToNext() {
+		if (document.getElementByID('ascnever').checked)
+		{
+			window.location = "http://www.jmu.edu/cop/asc/";
+		}
+		else {
+			document.forms.COBForms.submit();
+		}
+	}
+	function dispBox() {
+		if (document.getElementById('OtherOrg').checked == true) {
+			document.COBForm.OrgBox.style.display="block";
+		}
+		else {
+			document.COBForm.OrgBox.style.display="none";
+		}
+	}
 </script>
 
 </head>
@@ -137,11 +155,26 @@ input[type="button"]
 		<span id="GPAout">GPA <output for="gparange" name="showgpa">2.0</output></span>
 
 		<p>What is your Major?</p>
-		<label for="major">Major</label>
+		<input type="text" for="major" name="Maj" list="COBMajors" />
+		<datalist name="Majors" id="COBMajors">
+			<select>
+				<option value="Accounting">Accounting</option>
+				<option value="CIS">CIS</option>
+				<option value="ECON">Economics</option>
+				<option value="Finance">Finance</option>
+			</select>
+		</datalist>
 	
 	
 	
 		<p>How often do you use the services of the ASC?</p>
+		<label for="ascnever" class="asc-label">Never</label>
+			<input type="radio" name="ASC" id="ascnever" value="Never" />
+		<label for="ascweekly" class="asc-label">Weekly</label>
+			<input type="radio" name="ASC" id="ascweekly" value="Weekly" />
+		<label for="ascmonthly" class="asc-label">Monthly</label>
+			<input type="radio" name="ASC" id="ascmonthly" value="Monthly" />
+
 
 
 
