@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>JavaScript Multiplication</title>
+
+<style>
+body {
+	font-family: Arial, sans-serif; 
+	font-size: 14pt; 
+	background-color: #CCFFFF;
+	margin: 50px 0px 0px 150px
+	}
+	
+h1 {
+	font-family: Arial, sans-serif; 
+	font-size: 14pt; 
+	color: #000000; 
+	background-color: #CCCC99; 
+	margin: 20px 100px 30px 0px; 
+	padding: 10px; 
+	}
+
+p {
+	margin: 4px;
+	padding: 20px 0px 12px 0px;
+	}
+	
+input {margin-left: 8px;}
+#B1 {margin-right: 12px;}
+</style>
+
+<script language="JavaScript">
+
+function multiply(value1, value2) {
+	result = value1 * value2;
+	document.getElementById('answer').value = result;
+}
+function multiplyBlur(value1, value2) {
+	result = value1 * value2;
+	document.getElementById('answer2').value = result;
+}
+function multiplyAppend(one, two){
+	let answer = document.getElementById('ansSection');
+	result = one*two;
+
+	answer.append("The answer is " + result)
+}
+
+function multiplyPBHTML(one, two) {
+	result = one*two;
+
+	document.getElementById('answerFinal').innerHTML = "The answer is: " + result;
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+
+<form id="mult" name="mult" >  <!-- Pass values to function -->
+		
+										
+<h1>Multiplication Example - passing parameters</h1>
+	First value:<input type="number" name="value1" id="value1" />
+	Second value:<input type="number" name="value2" id="value2" />
+
+	<p>
+	<input type="button" value="Multiply" id="B1" name="B1" onclick="multiply(value1.value, value2.value);" /></p>
+	Answer:<input type="text" name="answer" id="answer"></input>
+</form>
+
+<form id="mult" name="mult" >  <!-- Pass values to function -->
+		
+										
+	<h1>Multiplication Example - onblur</h1>
+		First value:<input type="number" name="value1" id="value1" />
+		Second value:<input type="number" name="value2" id="value2" onblur="multiplyBlur(value1.value, value2.value);"/>
+	
+		Answer:<input type="text" name="answer" id="answer2"></input>
+</form>
+
+<form id="mult" name="mult" >  <!-- Pass values to function -->
+		
+										
+	<h1>Multiplication Example - append</h1>
+		First value:<input type="number" name="value1" id="value1" />
+		Second value:<input type="number" name="value2" id="value2" />
+	
+		<section id="ansSection">
+			
+		</section>
+
+		<input type="button" value="Multiply" id="B1" name="B1" onclick="multiplyAppend(value1.value, value2.value);" />
+</form>
+
+<form id="mult" name="mult" >  <!-- Pass values to function -->
+		
+										
+	<h1>Multiplication Example - innerHTML</h1>
+		First value:<input type="number" name="value1" id="value1" />
+		Second value:<input type="number" name="value2" id="value2" />
+	
+		<p id="answerFinal"></p>
+
+		<input type="button" value="Multiply" id="B1" name="B1" onclick="multiplyPBHTML(value1.value, value2.value);" />
+</form>
+
+</body>
+
+
+</html>

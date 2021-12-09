@@ -66,12 +66,7 @@ function compareNow2(one, two)
 	}
 
 function multiply() {
-	var one=(document.multNums.firstMult.value);
-	var two=(document.multNums.SecondMult.value);
-
-	result = (parseInt(one) * parseInt(two));
-
-	var ansSec = document.getElementById('ansMult').innerHTML = "The answer is " + result;
+	
 }
 </script>
 </head>
@@ -103,15 +98,6 @@ function multiply() {
 	<p id="answerp"></p>
 	
 </form>	
-
-<form id="multiply" name="multNums">
-	First value: <input type="number" name="firstMult" />
-	Second value: <input type="number" name="secondMult" />
-	<input type="button" value="Multiply" onclick="multiply();" />
-
-	
-
-</form>
 
 </body>
 </html>
