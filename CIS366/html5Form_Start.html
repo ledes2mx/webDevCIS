@@ -87,6 +87,9 @@ input[type="button"]
 	display: block;
 	margin-top: 1.5em;
 	}
+#OrgBox {
+	display: none;
+}
 	
 </style>
 <script type="text/javascript">
@@ -104,7 +107,7 @@ input[type="button"]
 		}
 	}
 
-	function smToNext() {
+	function sbmToNext() {
 		if (document.getElementByID('ascnever').checked)
 		{
 			window.location = "http://www.jmu.edu/cop/asc/";
@@ -175,9 +178,19 @@ input[type="button"]
 		<label for="ascmonthly" class="asc-label">Monthly</label>
 			<input type="radio" name="ASC" id="ascmonthly" value="Monthly" />
 
+		<p>Which student org are you involved in?</p>
+		<label for="aisOrg" class="chkbx">AIS</label>
+			<input type="checkbox" name="stuorg[]" id="aisOrg" value="AIS" />
+		<label for="mmaOrg" class="chkbx">MMA</label>
+			<input type="checkbox" name="stuorg[]" id="mmaOrg" value="MMA" />
+		<label for="mifOrg" class="chkbx">MIF</label>
+			<input type="checkbox" name="stuorg[]" id="mifOrg" value="MIF" />
+		<label for="aisOrg" class="chkbx">Other</label>
+			<input type="checkbox" name="stuorg[]" id="OtherOrg" value="Other"
+				onchange="dispBox();" />
+		<input type="text" id="OrgBox" placeholder="Other Orgs?" />
 
-
-
+		<input type="button" value="Next" onclick="sbmToNext();" />
 
 	</form>
 

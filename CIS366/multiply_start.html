@@ -46,7 +46,9 @@ function multiplyAppend(one, two){
 	let answer = document.getElementById('ansSection');
 	result = one*two;
 
-	answer.append("The answer is " + result)
+	answer.removeChild(answer.childNodes[0]);
+
+	answer.appendChild("The answer is " + result)
 }
 
 function multiplyPBHTML(one, two) {
