@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Hiking | Ledesma</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/south-street/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>	
+
+<style type="text/css">
+body { 
+	width: 75%;
+	margin: 3em auto;
+	font-family: Arial;}
+
+form {
+	font-size:100%;
+	padding-left: 1em;
+	margin-top: 2em;
+	}
+	
+h1 {
+	padding:5px 10px 15px 25px;
+	text-align: center;
+	color:#d49768;
+	}
+	
+h4 {
+	color: #d49768;
+	margin-bottom: 10px;
+	}
+
+.snp {margin: 2em 1em;}
+.rrg {
+	display: block;
+	margin-bottom: 2em;
+	}
+ 
+#emailSec {display: none;}
+		
+footer {
+	color: #9b6438;
+	font-size: 80%;
+	font-style: italic;
+	text-align: right;
+	margin-top: 10px;
+	padding-bottom: 75px;
+	}
+.tips {
+	background-color: #d49768;
+	color: #222;
+}
+</style> 
+
+<script type="text/javascript">
+
+	function showEmail() {
+
+	}
+</script>
+</head>
+
+<!--Miguel Ledesma | My submission of this test indicates that I have neither received nor given unauthorized assistance in 
+developing this page. All code is my own work.-->
+
+<body>
+
+	<script>
+	$( document ).ready(function() {
+
+		$("#tabs").tabs();
+		$(document).tooltip({
+			tooltipClass:"tips",
+		});
+	
+
+
+	// specify a class for tooltip; style the class in CSS ^^
+
+		
+	});
+
+	function dispBox() {
+		if (document.getElementById('yesNow').checked == true) {
+			document.hikeForm.emailSec.style.display="block";
+		}
+		else {
+			document.hikeForm.emailSec.style.display="none";
+		}
+	}
+
+	</script>
+
+<section id="container">
+<h1>Take a Hike!</h1>
+<section id="tabs">
+	<ul>
+		<li><a href="#RRG">Red River Gorge</a></li>
+		<li><a href="#SNP">Shenandoah National Park</a></li>
+		<li><a href="#Survey">Hiking Survey</a></li>
+	</ul>
+
+	<section id="RRG">
+	<h4>Hiking in Red River Gorge</h4>
+	<p>Nam consectetur, elit a mattis efficitur, <a href="#" title="Sandstone is a sedimenatry rock.">sandstone cliffs and arches</a>, culis dictum nisi, a posuere posuere tellus, aliquam feugiat purus risus vitae nulla. Sed molestie tristique dui, sed ociosqu ad litora torquent per conubia nostra, per inceptos taciti shimenaeos. Nulla finibus felis gravida eget. Sed tempus orci hendrerit fringilla feugiat. Cras sem mauris, 
+		tincidunt ac facilisis nec, commodo sit amet urna.
+	</p>
+	<img class="rrg" src="RRG2.jpg" /> 
+	<img class="rrg" src="RRG1.jpg" />
+	</section>	
+	<section id="SNP">
+	<h4>Hiking in SNP</h4>
+	<p> Cras vel ipsum feugiat, varius diam vitae, porta arcu. Sed iaculis dictum nisi, a posuere 
+		velit aliquet at. Sed lectus nisi, <a href="#" title="Hawkbills is the highest peak in the park." >highest peak</a> scelerisque ac vulputate et, convallis at nibh. Duis eu sollicitudin orci, 
+		in laoreet felis.</p> 
+	<img class="snp" src="SNP1.png" /> 
+	<img class="snp" src="SNP2.png" />
+	<p>Quisque quis sapien malesuada, viverra neque non, pellentesque velit. 
+		Aliquam nunc ante, ultrices eleifend elit vitae, consectetur dictum erat. Class aptent 
+		taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla 
+		facilisi. Suspendisse dictum orci sit amet aliquet viverra. Vivamus eu felis ac ante mollis 
+		dictum. Quisque ultrices finibus leo.</p>
+	</section>
+
+
+	<section id="Survey">
+	<h4>Please complete this hiking survey</h4>
+	<p>Nulla finibus felis gravida eget. Sed tempus orci hendrerit fringilla feugiat. Cras sem mauris, 
+		tincidunt ac facilisis nec, commodo sit amet urna. 	
+	</p>
+
+	<!-- the form should automatically go to https://www.nps.gov/shen/planyourvisit/day-hikes.htm when the user clicks the 'Submit' button -->
+	<form method="post" name="hikeForm">
+		<fieldset><legend>Please complete the survey below</legend>
+
+		<section class="freq">
+		<h4>How many times a month do you go hiking?</h4>
+		<span>0</span>
+		<input type="range" name="hiking" id="hikingRange" min="0" max="12" step="1" onchange="showRange.value = range.valueAsNumber" />
+		<span>4</span>
+		<br />
+		<span id="RangeOut"><output for="hikingRange" name="showRange">4</output> times/month.</span>
+
+		</section>
+
+		<section class="Look">
+		<h4>What do you look for on a hike?</h4>
+		<input type="checkbox" name="look[]" id="rockScramble" value="Rock Scramble">
+		<label for="rockScramble" class="chkbx">Rock Scramble</label>
+		<input type="checkbox" name="look[]" id="waterfalls" value="Waterfalls">
+		<label for="waterfalls" class="chkbx">Waterfalls</label>
+		<input type="checkbox" name="look[]" id="scenicViews" value="Scenic Views">
+		<label for="scenicViews" class="chkbx">Scenic Views</label>
+		<input type="checkbox" name="look[]" id="dogFriendly" value="Dog Friendly">
+		<label for="dogFriendly" class="chkbx">Dog Friendly</label>
+		
+		
+
+		</section>
+
+
+	   <section id="sectionApps">
+		<h4>Would you like to be added to our mailing list?</h4>
+		<input type="radio" name="mailing" id="not-now" value="No" />
+		<label for="not-now" class="mailingOption" onclick="dispBox();">Not right now</label>
+		<input type="radio" name="mailing" id="yesNow" value="Yes" onclick="dispBox();" />
+		<label for="yesNow" class="mailingOption">Yes, send me updates</label>
+
+	   </section>
+		
+		<section id="emailSec">
+		<h4>What is your e-mail address?</h4>
+			<input type="email" id="emailaddress" name="listemail" >
+		</section>
+
+		<br />
+		<input type="submit" value="Submit" />
+		<br />
+		</fieldset>
+
+	</form>
+	</section>
+</section> 
+	
+<footer>
+	<p>
+		<p id="ModDay"></p>
+		<script type="text/javascript">
+			var update = new Date(document.lastModified)
+			var days= ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"]
+			var modMonth = update.getMonth() + 1;
+			var modDate = update.getDate();
+			var modYear = update.getFullYear();
+			var modTime = update.getTime();
+			document.getElementById("ModDay").innerHTML = "&copy; " + document.lastModified;
+		</script>
+	
+	</p>
+	
+	<p id="author">Author: 
+		<script type="text/javascript">
+		document.getElementById("author").innerHTML = "Author: L. Miguel"
+	
+		</script>
+	</p>
+</footer>
+
+</body>
+</html> 
